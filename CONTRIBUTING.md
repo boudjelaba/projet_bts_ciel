@@ -1,1 +1,174 @@
+# Contribuer au Projet BTS
+
+Merci de votre intérêt pour **ce projet**.
+Les contributions sont les bienvenues, qu’il s’agisse de corrections de bugs, d’améliorations, de nouveaux templates ou de documentation.
+
+Ce document décrit les règles et bonnes pratiques pour contribuer au projet.
+
+---
+
+## Prérequis
+
+* Python **≥ 3.10**
+* `pip`
+* Un environnement Linux, macOS ou Windows
+* Connaissances de base en Python et Git
+
+---
+
+## Installation pour le développement
+
+1. Forker le dépôt sur GitHub
+2. Cloner le fork localement :
+
+```bash
+git clone https://github.com/boudjelaba/projet_bts_ciel.git
+cd projet_bts
+```
+
+---
+
+## Bonnes pratiques de code
+
+* Python clair et lisible
+* Fonctions courtes et bien nommées
+* Commentaires utiles (pas redondants)
+* Pas de dépendances inutiles
+* Compatibilité Linux / macOS / Windows
+
+---
+
+## Soumettre une contribution
+
+1. Créer une branche à partir de `main` :
+
+```bash
+git checkout -b feature/ma-fonctionnalite
+```
+
+2. Faire vos modifications
+3. Vérifier que tout fonctionne
+4. Commit avec un message clair :
+
+```bash
+git commit -m "Ajout du template xyz"
+```
+
+5. Push la branche et ouvrir une **Pull Request**
+
+---
+
+## Types de contributions appréciées
+
+* Corrections de bugs
+* Amélioration de la documentation
+* Simplification ou refactorisation du code
+* Suggestions d’amélioration (via issues)
+
+---
+
+## Style des commits (recommandé)
+
+Sans être strict, privilégier des messages du type :
+
+* `fix: correction du crash lors de --install`
+* `feat: ajout du template`
+* `docs: amélioration du README`
+* `refactor: simplification de codes`
+
+### Types standards
+
+| Type               | Impact    |
+| ------------------ | --------- |
+| `feat:`            | minor     |
+| `fix:`             | patch     |
+| `perf:`            | patch     |
+| `refactor:`        | patch     |
+| `docs:`            | aucun     |
+| `test:`            | aucun     |
+| `chore:`           | aucun     |
+| `feat!:`           | **major** |
+| `BREAKING CHANGE:` | **major** |
+
+Exemple valide :
+
+```text
+feat(cli): ajout de l'option --dry-run
+```
+
+---
+
+## Style des commits (Conventional Commits)
+
+Le projet utilise les **Conventional Commits** afin d’automatiser le versionnage et les releases.
+
+Format :
+
+```
+
+type(scope?): description
+
+````
+
+### Types principaux
+
+* `feat:` → nouvelle fonctionnalité (minor)
+* `fix:` → correction de bug (patch)
+* `docs:` → documentation uniquement
+* `refactor:` → refactorisation interne
+* `test:` → tests
+* `chore:` → maintenance
+
+### Changements cassants
+
+Pour une rupture de compatibilité :
+
+```text
+feat!: refonte du projet
+````
+
+ou
+
+```text
+feat: refonte du projet
+
+BREAKING CHANGE: changement de structure
+```
+
+---
+
+## Intégration continue
+
+Chaque Pull Request déclenche automatiquement :
+
+* Les tests
+* La validation du CHANGELOG
+* La vérification du format des commits
+
+Une PR ne respectant pas ces règles ne pourra pas être mergée.
+
+---
+
+## Signaler un bug ou proposer une idée
+
+* Ouvrir une **issue GitHub**
+* Décrire :
+
+  * ce que vous faites
+  * ce que vous attendez
+  * ce qui se passe réellement
+  * votre OS et la version de Python
+
+---
+
+## Code de conduite
+
+Soyez pros.
+
+---
+
+Merci pour vos contributions.
+Chaque amélioration aide à rendre **pygen** plus utile et plus robuste.
+
+---
 
