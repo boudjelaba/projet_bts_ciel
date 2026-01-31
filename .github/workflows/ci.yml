@@ -21,12 +21,12 @@ jobs:
 
       # Tester Task 1
       - name: Vérification Task 1 – Python basics
-        run: python task1_python_basics/main.py <<< "Test\nCIEL1"
+        run: python main.py <<< "Test\nCIEL2"
 
       # Tester Task 2
       - name: Vérification Task 2 – Logs
-        run: python task2_files/log_analyzer.py
+        run: python log_analyzer.py
 
       # Tester Task 3
       - name: Vérification Task 3 – Ping
-        run: python task3_network/ping_check.py <<< "8.8.8.8"
+        run: python ping_check.py <<< "8.8.8.8"
