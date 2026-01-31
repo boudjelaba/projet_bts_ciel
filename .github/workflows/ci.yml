@@ -1,39 +1,32 @@
-# Nom du test automatique (visible dans l’onglet "Actions")
 name: CI - Tests Python BTS CIEL
 
-# Quand est-ce que GitHub lance les tests ?
-# - à chaque envoi de code (push)
-# - à chaque pull request
 on:
   push:
   pull_request:
 
-# Un "job" = une suite d’actions exécutées automatiquement
 jobs:
   test:
-    # Le test est exécuté sur un ordinateur virtuel Linux
     runs-on: ubuntu-latest
 
     steps:
-      # Étape 1 : récupérer le contenu du projet
+      # Récupérer le projet
       - name: Récupération du projet
         uses: actions/checkout@v4
 
-      # Étape 2 : installer Python
+      # Installer Python
       - name: Installation de Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # Étape 3 : tester la Task 1
-      # On envoie des réponses automatiques au programme
+      # Tester Task 1
       - name: Vérification Task 1 – Python basics
         run: python task1_python_basics/main.py <<< "Test\nCIEL1"
 
-      # Étape 4 : tester la Task 2 (analyse de logs)
+      # Tester Task 2
       - name: Vérification Task 2 – Logs
         run: python task2_files/log_analyzer.py
 
-      # Étape 5 : tester la Task 3 (réseau)
+      # Tester Task 3
       - name: Vérification Task 3 – Ping
         run: python task3_network/ping_check.py <<< "8.8.8.8"
