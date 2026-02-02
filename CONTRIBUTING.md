@@ -56,6 +56,22 @@ git commit -m "feat: Ajout du template xyz"
 
 5. Push la branche et ouvrir une **Pull Request**
 
+### Format recommandé
+
+```
+[BTS-XX] <type> : <description courte>
+```
+
+### Exemples
+
+```
+[BTS-01] feature : analyse des logs
+[BTS-02] bug : erreur de comptage des ERROR
+[BTS-03] docs : compléter le README
+[BTS-04] ci : ajouter semantic-release
+[BTS-05] test : tests unitaires ping_check
+```
+
 ---
 
 ## Types de contributions appréciées
