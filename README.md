@@ -57,30 +57,28 @@ python nom_du_fichier.py
 ## Structure du projet
 
 ```
-bts-ciel-projet-starter/
-├── README.md
-│    ├─ Badge CI
-│    ├─ Objectifs pédagogiques
-│    ├─ Instructions pour lancer les scripts
-│    └─ Liens vers Wiki
-├── gantt.md
-├── RAPPORT.md
-├── task1_python_basics/
-│    └── main.py (# TODO + docstring)
-├── task2_files/
-│    └── log_analyzer.py (# TODO + docstring)
-├── task3_network/
-│    └── ping_check.py (# TODO + docstring)
-├── task4_bonus/
-│    └── mini_server.py (# TODO + docstring)
-├── .github/
-│    └── workflows/
-│        └── ci.yml (commenté + tests automatiques)
-├── .gitignore
-├── LICENSE (MIT)
-├── CONTRIBUTING.md (règles simples pour commits)
-└── templates/
-     ├── issue_bug.md
-     ├── issue_task.md
-     └── pull_request.md
+📦projet_bts_ciel
+ ┣ 📂.github
+ ┃ ┗ 📂workflows
+ ┃   ┗ 📜ci.yml
+ ┣ 📂tests
+ ┃ ┣ 📜conftest.py
+ ┃ ┣ 📜test_log_analyzer.py
+ ┃ ┣ 📜test_main.py
+ ┃ ┗ 📜test_ping_check.py
+ ┣ 📜.gitignore
+ ┣ 📜.pre-commit-config.yaml
+ ┣ 📜.releaserc.json
+ ┣ 📜CONTRIBUTING.md
+ ┣ 📜LICENSE
+ ┣ 📜README.md
+ ┣ 📜VERSION
+ ┣ 📜log.txt
+ ┣ 📜log_analyzer.py
+ ┣ 📜main.py
+ ┣ 📜mini_server.py
+ ┣ 📜package.json
+ ┣ 📜ping_check.py
+ ┣ 📜requirements.txt
+ ┗ 📜version.py
 ```
