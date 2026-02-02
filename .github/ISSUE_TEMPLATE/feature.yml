@@ -1,0 +1,31 @@
+name: "Feature"
+description: "Nouvelle fonctionnalité du projet"
+title: "[BTS-XX] feature : "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: objectif
+    attributes:
+      label: Objectif
+      description: Décris clairement la fonctionnalité attendue.
+      placeholder: Exemple : analyser un fichier de logs pour compter les erreurs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+      description: Comment comptes-tu implémenter cette fonctionnalité ?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: Critères d’acceptation
+      options:
+        - label: Le code fonctionne
+        - label: Les tests unitaires sont présents
+        - label: La CI passe
+        - label: La documentation est mise à jour
