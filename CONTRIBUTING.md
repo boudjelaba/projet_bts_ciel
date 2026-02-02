@@ -72,6 +72,16 @@ git commit -m "feat: Ajout du template xyz"
 [BTS-05] test : tests unitaires ping_check
 ```
 
+### Mapping type → semantic-release
+
+| Type issue | Label         | Commit   |
+| ---------- | ------------- | -------- |
+| feature    | type: feature | `feat:`  |
+| bug        | type: bug     | `fix:`   |
+| docs       | type: docs    | `docs:`  |
+| ci         | type: chore   | `chore:` |
+| test       | type: chore   | `chore:` |
+
 ---
 
 ## Types de contributions appréciées
