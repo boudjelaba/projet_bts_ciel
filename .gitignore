@@ -4,4 +4,10 @@ __pycache__/
 *.pyd
 env/
 venv/
+.venv/
 *.log
+.DS_Store
+.vscode/
+README.md
+.git/
+.pytest_cache/
