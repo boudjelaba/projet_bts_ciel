@@ -101,6 +101,12 @@ Exemple valide :
 feat(cli): ajout de l'option --dry-run
 ```
 
+Une issue est considérée comme terminée si :
+- [ ] code fonctionnel
+- [ ] tests passent
+- [ ] CI verte
+- [ ] documentation mise à jour si nécessaire
+
 ---
 
 ### Changements cassants
