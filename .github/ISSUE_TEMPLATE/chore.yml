@@ -1,0 +1,22 @@
+name: "Chore / CI"
+description: "Tâche technique, CI, refactor, dépendances"
+title: "[BTS-XX] chore : "
+labels: ["type: chore"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Tâche technique
+      description: Décris clairement le travail à effectuer.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - label: CI/CD
+        - label: Performance
+        - label: Maintenance
+        - label: Sécurité
