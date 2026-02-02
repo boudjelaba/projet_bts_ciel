@@ -60,25 +60,25 @@ python nom_du_fichier.py
 📦projet_bts_ciel
  ┣ 📂.github
  ┃ ┗ 📂workflows
- ┃   ┗ 📜ci.yml
+ ┃   ┗ ci.yml
  ┣ 📂tests
- ┃ ┣ 📜conftest.py
- ┃ ┣ 📜test_log_analyzer.py
- ┃ ┣ 📜test_main.py
- ┃ ┗ 📜test_ping_check.py
- ┣ 📜.gitignore
- ┣ 📜.pre-commit-config.yaml
- ┣ 📜.releaserc.json
- ┣ 📜CONTRIBUTING.md
- ┣ 📜LICENSE
- ┣ 📜README.md
- ┣ 📜VERSION
- ┣ 📜log.txt
- ┣ 📜log_analyzer.py
- ┣ 📜main.py
- ┣ 📜mini_server.py
- ┣ 📜package.json
- ┣ 📜ping_check.py
- ┣ 📜requirements.txt
- ┗ 📜version.py
+ ┃ ┣ conftest.py
+ ┃ ┣ test_log_analyzer.py
+ ┃ ┣ test_main.py
+ ┃ ┗ test_ping_check.py
+ ┣ .gitignore
+ ┣ .pre-commit-config.yaml
+ ┣ .releaserc.json
+ ┣ CONTRIBUTING.md
+ ┣ LICENSE
+ ┣ README.md
+ ┣ VERSION
+ ┣ log.txt
+ ┣ log_analyzer.py
+ ┣ main.py
+ ┣ mini_server.py
+ ┣ package.json
+ ┣ ping_check.py
+ ┣ requirements.txt
+ ┗ version.py
 ```
