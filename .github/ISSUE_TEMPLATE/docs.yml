@@ -1,0 +1,22 @@
+name: "Documentation"
+description: "Amélioration ou ajout de documentation"
+title: "[BTS-XX] docs : "
+labels: ["type: docs"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Quelle documentation est à créer ou améliorer ?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Portée
+      options:
+        - label: README
+        - label: Commentaires de code
+        - label: CONTRIBUTING
+        - label: Autre documentation
