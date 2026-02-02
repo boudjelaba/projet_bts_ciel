@@ -36,6 +36,7 @@ Closes #XX
 - [ ] La CI est verte
 - [ ] Le code est lisible et commenté si nécessaire
 - [ ] La documentation est à jour (si applicable)
+- [ ] Pas de commit non conventionnel (feat/fix/docs/chore)
 
 ---
 
@@ -44,4 +45,7 @@ Closes #XX
 - [ ] Changement rétrocompatible
 - [ ] Changement nécessitant une attention particulière
 
-Précisions (si nécessaire) :
+---
+
+##  Notes
+(Optionnel) Informations complémentaires
