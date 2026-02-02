@@ -51,7 +51,7 @@ git checkout -b feature/ma-fonctionnalite
 4. Commit avec un message clair :
 
 ```bash
-git commit -m "Ajout du template xyz"
+git commit -m "feat: Ajout du template xyz"
 ```
 
 5. Push la branche et ouvrir une **Pull Request**
@@ -67,14 +67,19 @@ git commit -m "Ajout du template xyz"
 
 ---
 
-## Style des commits (recommandé)
+## Style des commits (Conventional Commits)
 
-Sans être strict, privilégier des messages du type :
+Les messages de commit doivent respecter la forme :
 
-* `fix: correction du crash lors de --install`
-* `feat: ajout du template`
-* `docs: amélioration du README`
-* `refactor: simplification de codes`
+<type>: <description courte>
+
+**Exemples :**
+
+- `feat: ajouter un nouveau test sur ping_check`
+- `fix: corriger l'affichage des logs`
+- `docs: compléter le README`
+- `chore: mettre à jour .gitignore`
+- `ci: modifier le workflow GitHub`
 
 ### Types standards
 
@@ -97,27 +102,6 @@ feat(cli): ajout de l'option --dry-run
 ```
 
 ---
-
-## Style des commits (Conventional Commits)
-
-Le projet utilise les **Conventional Commits** afin d’automatiser le versionnage et les releases.
-
-Format :
-
-```
-
-type(scope?): description
-
-````
-
-### Types principaux
-
-* `feat:` → nouvelle fonctionnalité (minor)
-* `fix:` → correction de bug (patch)
-* `docs:` → documentation uniquement
-* `refactor:` → refactorisation interne
-* `test:` → tests
-* `chore:` → maintenance
 
 ### Changements cassants
 
