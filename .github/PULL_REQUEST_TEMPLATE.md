@@ -1,7 +1,7 @@
 # Pull Request
 
 ## Titre
-[BTS-XX] <type> : <description courte>
+`[BTS-XX] <type> : <description courte>`
 
 ---
 
