@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/boudjelaba/projet_bts_ciel/compare/v1.2.0...v1.3.0) (2026-02-05)
+
+
+### Features
+
+* ajout commande à readme ([1d62e2f](https://github.com/boudjelaba/projet_bts_ciel/commit/1d62e2f6f0435be8cc5672895c52bbb8f04911b2))
+
 # [1.2.0](https://github.com/boudjelaba/projet_bts_ciel/compare/v1.1.0...v1.2.0) (2026-02-02)
 
 
