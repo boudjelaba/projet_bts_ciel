@@ -1,15 +1,20 @@
 # Pull Request
 
 ## Titre
-`[BTS-XX] <type> : <description courte>`
+Utilisez un titre clair, aligné avec les commits.
+
+**Format recommandé :**
+`feat(log): analyse des logs`
+`fix(ping): corriger le timeout`
+`docs: mise à jour du README`
 
 ---
 
 ## Description
-Décris brièvement ce que fait cette Pull Request.
+Décrivez brièvement ce que fait cette Pull Request.
 
 Exemples :
-- ajout de l'analyse des logs
+- ajout de l’analyse des logs
 - correction du comptage des erreurs
 - amélioration de la documentation
 
@@ -26,26 +31,30 @@ Closes #XX
 - [ ] Feature (nouvelle fonctionnalité)
 - [ ] Bug fix
 - [ ] Documentation
-- [ ] Chore / CI / Refactor
+- [ ] Tests
+- [ ] Chore / CI
 
 ---
 
 ## Checklist avant merge
+
 - [ ] Le code est fonctionnel
 - [ ] Les tests unitaires sont présents ou mis à jour
 - [ ] La CI est verte
 - [ ] Le code est lisible et commenté si nécessaire
 - [ ] La documentation est à jour (si applicable)
-- [ ] Pas de commit non conventionnel (feat/fix/docs/chore)
+- [ ] Tous les commits respectent le format conventionnel  
+  (`feat`, `fix`, `docs`, `test`, `chore`, `ci`)
 
 ---
 
 ## Impact
+
 - [ ] Aucun impact majeur
 - [ ] Changement rétrocompatible
-- [ ] Changement nécessitant une attention particulière
+- [ ] BREAKING CHANGE (à documenter clairement)
 
 ---
 
-##  Notes
+## Notes
 (Optionnel) Informations complémentaires
