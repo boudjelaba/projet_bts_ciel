@@ -1,190 +1,165 @@
-# Contribuer au Projet BTS
+# Contribuer au projet BTS CIEL
 
-Merci de votre intérêt pour **ce projet**.
-Les contributions sont les bienvenues, qu’il s’agisse de corrections de bugs, d’améliorations, de nouveaux templates ou de documentation.
+Merci de votre intérêt pour ce projet pédagogique.
+Ce document décrit les **règles et bonnes pratiques** pour contribuer correctement au dépôt.
 
-Ce document décrit les règles et bonnes pratiques pour contribuer au projet.
+## Objectif de ce document
 
----
+* Garantir un code lisible et fonctionnel
+* Harmoniser les contributions
+* Assurer le bon fonctionnement de la CI et des releases automatiques
+* Apprendre de **bonnes pratiques professionnelles**
 
 ## Prérequis
 
 * Python **≥ 3.10**
 * `pip`
+* Git
 * Un environnement Linux, macOS ou Windows
 * Connaissances de base en Python et Git
 
----
+## Installation pour contribuer
 
-## Installation pour le développement
-
-1. Forker le dépôt sur GitHub
+1. Forker le dépôt GitHub
 2. Cloner le fork localement :
 
 ```bash
 git clone https://github.com/boudjelaba/projet_bts_ciel.git
-cd projet_bts
+cd projet_bts_ciel
 ```
 
----
+3. Installer les hooks Git (obligatoire) :
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+> Sans cette étape, les commits pourront être refusés plus tard par la CI.
 
 ## Bonnes pratiques de code
 
-* Python clair et lisible
+* Code Python clair, lisible et commenté
 * Fonctions courtes et bien nommées
-* Commentaires utiles (pas redondants)
 * Pas de dépendances inutiles
 * Compatibilité Linux / macOS / Windows
+* Respect des consignes présentes dans les fichiers (`# TODO`)
 
----
+## Organisation du travail
 
-## Soumettre une contribution
+* Toute contribution se fait **via une branche**
+* La branche `main` est protégée
 
-1. Créer une branche à partir de `main` :
+Créer une branche :
 
 ```bash
 git checkout -b feature/ma-fonctionnalite
 ```
 
-2. Faire vos modifications
-3. Vérifier que tout fonctionne
-4. Commit avec un message clair :
+## Style des commits (obligatoire)
 
-```bash
-git commit -m "feat: Ajout du template xyz"
-```
+Ce projet utilise les **Conventional Commits**.
+Tout commit non conforme sera **refusé automatiquement**.
 
-5. Push la branche et ouvrir une **Pull Request**
-
-### Format recommandé
-
-```
-[BTS-XX] <type> : <description courte>
-```
-
-### Exemples
-
-```
-[BTS-01] feature : analyse des logs
-[BTS-02] bug : erreur de comptage des ERROR
-[BTS-03] docs : compléter le README
-[BTS-04] ci : ajouter semantic-release
-[BTS-05] test : tests unitaires ping_check
-```
-
-### Mapping type → semantic-release
-
-| Type issue | Label         | Commit   |
-| ---------- | ------------- | -------- |
-| feature    | type: feature | `feat:`  |
-| bug        | type: bug     | `fix:`   |
-| docs       | type: docs    | `docs:`  |
-| ci         | type: chore   | `chore:` |
-| test       | type: chore   | `chore:` |
-
----
-
-## Types de contributions appréciées
-
-* Corrections de bugs
-* Amélioration de la documentation
-* Simplification ou refactorisation du code
-* Suggestions d’amélioration (via issues)
-
----
-
-## Style des commits (Conventional Commits)
-
-Les messages de commit doivent respecter la forme :
-
-<type>: <description courte>
-
-**Exemples :**
-
-- `feat: ajouter un nouveau test sur ping_check`
-- `fix: corriger l'affichage des logs`
-- `docs: compléter le README`
-- `chore: mettre à jour .gitignore`
-- `ci: modifier le workflow GitHub`
-
-### Types standards
-
-| Type               | Impact    |
-| ------------------ | --------- |
-| `feat:`            | minor     |
-| `fix:`             | patch     |
-| `perf:`            | patch     |
-| `refactor:`        | patch     |
-| `docs:`            | aucun     |
-| `test:`            | aucun     |
-| `chore:`           | aucun     |
-| `feat!:`           | **major** |
-| `BREAKING CHANGE:` | **major** |
-
-Exemple valide :
+### Format attendu
 
 ```text
-feat(cli): ajout de l'option --dry-run
+type(scope): description courte
 ```
 
-Une issue est considérée comme terminée si :
-- [ ] code fonctionnel
-- [ ] tests passent
-- [ ] CI verte
-- [ ] documentation mise à jour si nécessaire
+### Types autorisés
 
----
+| Type    | Description                    |
+| ------- | ------------------------------ |
+| `feat`  | nouvelle fonctionnalité        |
+| `fix`   | correction de bug              |
+| `docs`  | documentation                  |
+| `test`  | ajout ou modification de tests |
+| `chore` | maintenance / nettoyage        |
+| `ci`    | configuration CI               |
 
-### Changements cassants
+### Exemples valides
+
+```text
+feat(log): analyse des logs
+fix(ping): corriger le timeout
+docs: compléter le README
+test: ajouter des tests unitaires
+chore: nettoyer le code
+ci: ajuster le workflow GitHub
+```
+
+## Versioning automatique (semantic-release)
+
+Le versioning est **entièrement automatique**.
+
+| Type de commit    | Impact sur la version |
+| ----------------- | --------------------- |
+| `fix:`            | patch (x.y.z)         |
+| `feat:`           | minor (x.y.0)         |
+| `BREAKING CHANGE` | major (x.0.0)         |
+
+Les commits `docs`, `test`, `chore` et `ci` :
+
+* ✔ sont acceptés
+* ❌ ne déclenchent **pas** de nouvelle version
+* ❌ ne mettent **pas** à jour le changelog
+
+> **Ne modifiez jamais la version manuellement.**
+
+## Changements cassants (BREAKING CHANGE)
 
 Pour une rupture de compatibilité :
 
 ```text
 feat!: refonte du projet
-````
-
-ou
-
-```text
-feat: refonte du projet
-
-BREAKING CHANGE: changement de structure
 ```
 
----
+ou :
 
-## Intégration continue
+```text
+feat(core): refonte du projet
 
-Chaque Pull Request déclenche automatiquement :
+BREAKING CHANGE: changement de structure du projet
+```
 
-* Les tests
-* La validation du CHANGELOG
-* La vérification du format des commits
+## Intégration continue (CI)
 
-Une PR ne respectant pas ces règles ne pourra pas être mergée.
+Chaque **Pull Request** déclenche automatiquement :
 
----
+* l’exécution des tests
+* la vérification du format des commits
+* les hooks pre-commit côté CI
+
+> Le `CHANGELOG.md` est généré **uniquement** :
+
+* lors d’un push sur la branche `main`
+* après validation des tests
+* si une nouvelle version est détectée
+
+## Vérifications avant Pull Request
+
+Avant d’ouvrir une PR, assurez-vous que :
+
+* [ ] le code fonctionne
+* [ ] les tests passent
+* [ ] la CI est verte
+* [ ] la documentation est mise à jour si nécessaire
+* [ ] les commits respectent le format imposé
 
 ## Signaler un bug ou proposer une idée
 
 * Ouvrir une **issue GitHub**
-* Décrire :
+* Décrire clairement :
 
   * ce que vous faites
   * ce que vous attendez
   * ce qui se passe réellement
   * votre OS et la version de Python
 
----
-
 ## Code de conduite
 
 Soyez pros.
+Ce projet est aussi un **outil d’apprentissage**.
 
----
-
-Merci pour vos contributions.
-Chaque amélioration aide à rendre **pygen** plus utile et plus robuste.
-
----
-
+Merci pour vos contributions
