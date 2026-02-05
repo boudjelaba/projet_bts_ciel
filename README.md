@@ -15,6 +15,7 @@
 - Tester automatiquement le code avec GitHub Actions
 
 ## Contenu du projet
+
 - Task 1 – Python : prise en main
 - Task 2 – Analyse de logs
 - Task 3 – Test réseau
@@ -28,6 +29,7 @@
 ---
 
 ## Prérequis
+
 - Python 3 installé
 - Un terminal
 - Un éditeur de code (VS Code recommandé)
@@ -82,3 +84,9 @@ python nom_du_fichier.py
  ┣ requirements.txt
  ┗ version.py
 ```
+
+| Type de commit    | Effet             |
+| ----------------- | ----------------- |
+| `fix:`            | patch (x.y.**z**) |
+| `feat:`           | minor (x.**y**.0) |
+| `BREAKING CHANGE` | major (**x**.0.0) |
