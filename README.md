@@ -90,3 +90,8 @@ python nom_du_fichier.py
 | `fix:`            | patch (x.y.**z**) |
 | `feat:`           | minor (x.**y**.0) |
 | `BREAKING CHANGE` | major (**x**.0.0) |
+
+```bash
+pip install pre-commit
+pre-commit install
+```
